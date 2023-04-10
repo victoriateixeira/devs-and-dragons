@@ -1,4 +1,4 @@
-export default class Race {
+export default abstract class Race {
   private _name: string;
   private _dexterity: number;
   constructor(name: string, dexterity: number) {
@@ -14,7 +14,9 @@ export default class Race {
     return this._dexterity;
   }
 
-  static createdRacesInstances(): number {
+  public static createdRacesInstances(): number {
     throw new Error('Not implemented');
   }
+
+  public abstract get maxLifePoints(): number;
 }
