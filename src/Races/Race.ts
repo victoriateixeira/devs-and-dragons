@@ -1,7 +1,7 @@
 export default class Race {
   private _name: string;
   private _dexterity: number;
-
+  private static _instances: number;
   constructor(name: string, dexterity: number) {
     this._name = name;
     this._dexterity = dexterity;
@@ -13,5 +13,10 @@ export default class Race {
 
   get dexterity(): number {
     return this._dexterity;
+  }
+
+  static createdRacesInstances(): number {
+    Race._instances += 1;
+    return Race._instances;
   }
 }
