@@ -1,7 +1,7 @@
 import Energy from '../Energy';
 
 export default interface Fighter {
-  lifepoints: number;
+  lifePoints: number;
   strength: number;
   defense: number;
   energy?: Energy;
